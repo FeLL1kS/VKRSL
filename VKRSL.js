@@ -3,7 +3,7 @@ async function wait(ms) {
 };
 async function VKRSL() {
 
-  var like_button = document.querySelector('.like_button_icon');
+  var like_button = document.querySelector('.like_btn');
   var right_button = document.getElementById('pv_nav_btn_right');
   while (!like_button.classList.contains('active')){
     like_button.click();
@@ -11,7 +11,7 @@ async function VKRSL() {
     var event = new Event('mousedown');
     right_button.dispatchEvent(event);
     await wait(1000);
-    like_button = document.querySelector('.like_button_icon');
+    like_button = document.querySelector('.like_btn');
   }
 
 }
